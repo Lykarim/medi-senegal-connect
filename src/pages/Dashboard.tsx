@@ -2,11 +2,10 @@
 import React from "react";
 import { useAuth } from "../context/AuthContext";
 import { mockRequests } from "../data/mockData";
-import { Bell, CheckCircle, Activity, Clock, Settings } from "lucide-react";
+import { Bell, CheckCircle, Activity } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { useNavigate } from "react-router-dom";
-import Logo from "@/components/Logo";
 
 const Dashboard: React.FC = () => {
   const { user } = useAuth();
@@ -32,16 +31,11 @@ const Dashboard: React.FC = () => {
   return (
     <div className="w-full h-full bg-muted">
       <div className="w-full max-w-md mx-auto min-h-screen flex flex-col">
-        {/* Header with logo and date */}
-        <header className="p-4 border-b bg-white">
-          <div className="flex items-center mb-3">
-            <Logo size="sm" showText={false} />
-            <div className="ml-2">
-              <p className="text-muted-foreground text-sm">{formattedDate}</p>
-              <h1 className="text-2xl font-bold">Bienvenue, {user?.pharmacy.name}</h1>
-            </div>
-          </div>
-          <p className="text-primary">
+        {/* Header with date */}
+        <header className="p-4 border-b">
+          <p className="text-muted-foreground">{formattedDate}</p>
+          <h1 className="text-2xl font-bold mt-2">Bienvenue, {user?.pharmacy.name}</h1>
+          <p className="text-primary mt-1">
             Vous avez <span className="font-semibold">{activeRequests.length}</span> demandes actives
           </p>
         </header>
@@ -112,14 +106,14 @@ const Dashboard: React.FC = () => {
             className="flex flex-col items-center text-gray-500"
             onClick={() => navigate('/history')}
           >
-            <Clock className="h-6 w-6" />
+            <Bell className="h-6 w-6" />
             <span className="text-xs mt-1">Historique</span>
           </button>
           <button 
             className="flex flex-col items-center text-gray-500"
             onClick={() => navigate('/settings')}
           >
-            <Settings className="h-6 w-6" />
+            <Bell className="h-6 w-6" />
             <span className="text-xs mt-1">Paramètres</span>
           </button>
         </nav>

@@ -1,7 +1,7 @@
 
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import Logo from "@/components/Logo";
+import { Plus } from "lucide-react";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -15,7 +15,9 @@ const Index = () => {
       <div className="max-w-md w-full text-center space-y-6">
         {/* Logo and name */}
         <div className="flex flex-col items-center space-y-3">
-          <Logo size="lg" showText={false} />
+          <div className="bg-primary rounded-xl p-3 w-20 h-20 flex items-center justify-center">
+            <Plus className="h-10 w-10 text-white" />
+          </div>
           <h1 className="text-3xl font-bold text-slate-800">MediFinder</h1>
         </div>
         
