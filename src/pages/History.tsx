@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
+import Logo from "@/components/Logo";
 
 const History: React.FC = () => {
   const navigate = useNavigate();
@@ -18,8 +19,13 @@ const History: React.FC = () => {
       <div className="w-full max-w-md mx-auto min-h-screen flex flex-col">
         {/* Header */}
         <header className="p-4 border-b bg-white">
-          <h1 className="text-xl font-bold">Historique</h1>
-          <p className="text-muted-foreground">Demandes de médicaments traitées</p>
+          <div className="flex items-center mb-2">
+            <Logo size="sm" showText={false} />
+            <div className="ml-2">
+              <h1 className="text-xl font-bold">Historique</h1>
+              <p className="text-muted-foreground">Demandes de médicaments traitées</p>
+            </div>
+          </div>
         </header>
         
         {/* History list */}

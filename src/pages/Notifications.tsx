@@ -1,12 +1,13 @@
 
 import React from "react";
 import { mockRequests } from "../data/mockData";
-import { File, Bell, Clock, Settings, CheckCircle, XCircle } from "lucide-react";
+import { File, Bell, Clock, Settings, CheckCircle, XCircle, Activity } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import Logo from "@/components/Logo";
 
 const Notifications: React.FC = () => {
   const navigate = useNavigate();
@@ -31,8 +32,13 @@ const Notifications: React.FC = () => {
       <div className="w-full max-w-md mx-auto min-h-screen flex flex-col">
         {/* Header */}
         <header className="p-4 border-b bg-white">
-          <h1 className="text-xl font-bold">Notifications</h1>
-          <p className="text-muted-foreground">Demandes de médicaments en attente</p>
+          <div className="flex items-center mb-2">
+            <Logo size="sm" showText={false} />
+            <div className="ml-2">
+              <h1 className="text-xl font-bold">Notifications</h1>
+              <p className="text-muted-foreground">Demandes de médicaments en attente</p>
+            </div>
+          </div>
         </header>
         
         {/* Notifications list */}
@@ -125,7 +131,7 @@ const Notifications: React.FC = () => {
             className="flex flex-col items-center text-gray-500"
             onClick={() => navigate('/dashboard')}
           >
-            <Bell className="h-6 w-6" />
+            <Activity className="h-6 w-6" />
             <span className="text-xs mt-1">Accueil</span>
           </button>
           <button 

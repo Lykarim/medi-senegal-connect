@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import Logo from "@/components/Logo";
 
 const Settings: React.FC = () => {
   const { user, logout } = useAuth();
@@ -25,8 +26,13 @@ const Settings: React.FC = () => {
       <div className="w-full max-w-md mx-auto min-h-screen flex flex-col">
         {/* Header */}
         <header className="p-4 border-b bg-white">
-          <h1 className="text-xl font-bold">Paramètres</h1>
-          <p className="text-muted-foreground">Informations de la pharmacie</p>
+          <div className="flex items-center mb-2">
+            <Logo size="sm" showText={false} />
+            <div className="ml-2">
+              <h1 className="text-xl font-bold">Paramètres</h1>
+              <p className="text-muted-foreground">Informations de la pharmacie</p>
+            </div>
+          </div>
         </header>
         
         {/* Settings content */}

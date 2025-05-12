@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import Logo from "@/components/Logo";
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -46,7 +47,9 @@ const Login: React.FC = () => {
     <div className="flex items-center justify-center min-h-screen bg-muted p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl font-bold text-center">MediFinder</CardTitle>
+          <div className="flex justify-center mb-2">
+            <Logo size="sm" />
+          </div>
           <CardDescription className="text-center">
             Connectez-vous à votre compte pharmacie
           </CardDescription>
