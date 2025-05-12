@@ -26,7 +26,7 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#4A89DC', // Main blue color
+					DEFAULT: '#1E88E5', // Updated to a brighter blue that matches the logo
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
