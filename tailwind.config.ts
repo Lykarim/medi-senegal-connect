@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -25,7 +26,7 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
+					DEFAULT: '#4A89DC', // Main blue color
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
@@ -37,12 +38,12 @@ export default {
 					foreground: 'hsl(var(--destructive-foreground))'
 				},
 				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
+					DEFAULT: '#F6F7FB', // Light gray background
+					foreground: '#8E9196' // Medium gray text
 				},
 				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
+					DEFAULT: '#E2E8F0', // Light blue-gray
+					foreground: '#1E293B' // Dark text for accent
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
